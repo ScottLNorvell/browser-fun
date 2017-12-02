@@ -1,0 +1,8 @@
+<h4>
+  Why not make
+  <button class={{if isActive 'active'}} {{action 'setVoice'}}>{{voice.name}}</button>
+  <span class='lang'>
+    ({{voice.lang}})
+  </span>
+  <button {{action 'sayWithVoice'}}>say the thing.</button>
+</h4>

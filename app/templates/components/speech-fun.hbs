@@ -1,0 +1,39 @@
+<h2>Speech Fun</h2>
+
+  {{textarea value=theThing placeholder='Type Something to say'}}
+
+  <div>
+    <label for="{{concat elementId '-pitch'}}">
+      Pitch: {{pitch}}
+    </label>
+      {{input
+          type='range'
+          value=pitch
+          min='0.1'
+          max='2'
+          step="0.1"
+          id=(concat elementId '-pitch')
+        }}
+  </div>
+  <div>
+    <label for="{{concat elementId '-rate'}}">
+      Rate: {{rate}}
+    </label>
+      {{input
+          type='range'
+          value=rate
+          min='0.1'
+          max='2'
+          step="0.1"
+          id=(concat elementId '-rate')
+        }}
+  </div>
+  <div>
+    <button {{action 'sayTheThing'}}>Go Ahead</button>
+    <button {{action 'clear'}}>Clear</button>
+    <button {{action 'logIt'}}>logIt</button>
+  </div>
+
+{{#each speech.voices as |voice|}}
+  {{speech-sayer voice=voice action='sayTheThing'}}
+{{/each}}
