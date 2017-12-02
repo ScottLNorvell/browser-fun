@@ -1,3 +1,17 @@
+.charging {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.not-charging {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.show-charge {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 button {
   font-size: 15px;
   border: 1px dashed black;

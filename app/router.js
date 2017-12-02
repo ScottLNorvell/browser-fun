@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('speech');
+  this.route('battery');
 });
 
 export default Router;

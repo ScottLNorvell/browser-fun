@@ -1,2 +1,7 @@
-<h1>Browser Fun!</h1>
-{{outlet}}
+<div class={{chargingClass}}>
+  <h1>Browser Fun!</h1>
+  {{link-to 'Speech Fun' 'speech'}}
+  {{link-to 'Battery Fun' 'battery'}}
+  {{outlet}}
+</div>
+<button class='show-charge' {{action 'showChargeIndicator'}} >show charge indication</button>
