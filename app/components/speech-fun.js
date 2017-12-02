@@ -11,11 +11,12 @@ export default Component.extend({
       const theThing = this.get('theThing');
       this.get('speech').say(theThing);
     },
-    clear() {
-      this.set('theThing', '');
-    },
-    logIt() {
-      console.log(this.get('pitch'));
+    reset() {
+      this.setProperties({
+        theThing: '',
+        pitch: 1,
+        rate: 1
+      });
     }
   }
 });
